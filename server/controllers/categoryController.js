@@ -1,6 +1,6 @@
-const Category = require('../models/Category');
-const Product = require('../models/Product');
-const { successResponse, errorResponse } = require('../utils/apiResponse');
+import Category from "../models/Category.js";
+import Product from "../models/Product.js";
+import {  successResponse, errorResponse  } from "../utils/apiResponse.js";
 
 /**
  * @desc    Get all categories
@@ -129,4 +129,4 @@ const deleteCategory = async (req, res, next) => {
   }
 };
 
-module.exports = { getCategories, getCategory, createCategory, updateCategory, deleteCategory };
+export { getCategories, getCategory, createCategory, updateCategory, deleteCategory };

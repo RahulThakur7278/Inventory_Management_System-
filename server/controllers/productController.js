@@ -1,7 +1,11 @@
-const Product = require('../models/Product');
-const { successResponse, errorResponse, paginatedResponse } = require('../utils/apiResponse');
-const fs = require('fs');
-const path = require('path');
+import Product from "../models/Product.js";
+import {  successResponse, errorResponse, paginatedResponse  } from "../utils/apiResponse.js";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * @desc    Get all products with search, filter, pagination
@@ -212,4 +216,4 @@ const deleteProduct = async (req, res, next) => {
   }
 };
 
-module.exports = { getProducts, getProduct, createProduct, updateProduct, deleteProduct };
+export { getProducts, getProduct, createProduct, updateProduct, deleteProduct };

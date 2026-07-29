@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+import jwt from "jsonwebtoken";
 
 /**
  * Authentication service.
@@ -17,4 +17,4 @@ const authService = {
   },
 };
 
-module.exports = authService;
+export default authService;
