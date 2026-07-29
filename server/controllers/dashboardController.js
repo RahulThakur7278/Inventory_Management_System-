@@ -1,6 +1,6 @@
-const Product = require('../models/Product');
-const Category = require('../models/Category');
-const { successResponse } = require('../utils/apiResponse');
+import Product from "../models/Product.js";
+import Category from "../models/Category.js";
+import {  successResponse  } from "../utils/apiResponse.js";
 
 /**
  * @desc    Get dashboard statistics
@@ -29,4 +29,4 @@ const getStats = async (req, res, next) => {
   }
 };
 
-module.exports = { getStats };
+export { getStats };

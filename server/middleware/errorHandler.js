@@ -67,4 +67,4 @@ const globalErrorHandler = (err, req, res, next) => {
   });
 };
 
-module.exports = { notFound, globalErrorHandler };
+export { notFound, globalErrorHandler };

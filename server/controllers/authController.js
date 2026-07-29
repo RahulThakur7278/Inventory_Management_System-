@@ -1,6 +1,6 @@
-const User = require('../models/User');
-const authService = require('../services/authService');
-const { successResponse, errorResponse } = require('../utils/apiResponse');
+import User from "../models/User.js";
+import authService from "../services/authService.js";
+import {  successResponse, errorResponse  } from "../utils/apiResponse.js";
 
 /**
  * @desc    Login user
@@ -57,4 +57,4 @@ const getMe = async (req, res, next) => {
   }
 };
 
-module.exports = { login, getMe };
+export { login, getMe };

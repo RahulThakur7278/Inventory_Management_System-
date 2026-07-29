@@ -1,19 +1,23 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const morgan = require('morgan');
-const path = require('path');
-const swaggerUi = require('swagger-ui-express');
-const swaggerSpec = require('./config/swagger');
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import morgan from "morgan";
+import path from "path";
+import swaggerUi from "swagger-ui-express";
+import swaggerSpec from "./config/swagger.js";
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Import routes
-const authRoutes = require('./routes/authRoutes');
-const categoryRoutes = require('./routes/categoryRoutes');
-const productRoutes = require('./routes/productRoutes');
-const dashboardRoutes = require('./routes/dashboardRoutes');
+import authRoutes from "./routes/authRoutes.js";
+import categoryRoutes from "./routes/categoryRoutes.js";
+import productRoutes from "./routes/productRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
 
 // Import middleware
-const { notFound, globalErrorHandler } = require('./middleware/errorHandler');
+import {  notFound, globalErrorHandler  } from "./middleware/errorHandler.js";
 
 const app = express();
 
@@ -63,4 +67,4 @@ app.get('/api/health', (req, res) => {
 app.use(notFound);
 app.use(globalErrorHandler);
 
-module.exports = app;
+export default app;

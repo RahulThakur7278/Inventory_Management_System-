@@ -1,4 +1,4 @@
-const User = require('../models/User');
+import User from "../models/User.js";
 
 /**
  * Seed default admin user if not exists.
@@ -26,4 +26,4 @@ const seedAdmin = async () => {
   }
 };
 
-module.exports = seedAdmin;
+export default seedAdmin;

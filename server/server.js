@@ -1,8 +1,9 @@
-require('dotenv').config();
+import dotenv from "dotenv";
+dotenv.config();
 
-const app = require('./app');
-const connectDB = require('./config/db');
-const seedAdmin = require('./seed/adminSeed');
+import app from "./app.js";
+import connectDB from "./config/db.js";
+import seedAdmin from "./seed/adminSeed.js";
 
 const PORT = process.env.PORT || 5000;
 
