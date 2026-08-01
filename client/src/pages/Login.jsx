@@ -50,7 +50,7 @@ const Login = () => {
               <Box className="w-8 h-8" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold">InvenTrack</h1>
+              <h1 className="text-2xl font-bold">InvenTrack</h1>
               <p className="text-primary-200 text-sm">Management System</p>
             </div>
           </div>
@@ -91,7 +91,7 @@ const Login = () => {
 
           <div className="bg-white dark:bg-dark-card rounded-2xl shadow-xl border border-gray-100 dark:border-dark-border p-8">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
                 Welcome back
               </h2>
               <p className="text-gray-500 dark:text-gray-400 mt-1.5">
