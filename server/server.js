@@ -1,6 +1,14 @@
 import dotenv from "dotenv";
 dotenv.config();
 
+import dns from "dns";
+dns.setDefaultResultOrder("ipv4first");
+try {
+  dns.setServers(["8.8.8.8", "8.8.4.4"]);
+} catch (e) {
+  console.warn("Could not set custom DNS servers:", e.message);
+}
+
 import app from "./app.js";
 import connectDB from "./config/db.js";
 import seedAdmin from "./seed/adminSeed.js";
